@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ImageGalleriesApp"
+             x:Class="ImageGalleriesApp.MainPage">
+
+    <StackLayout>
+        <Label Text="Галерея фотографий" 
+                   FontSize="Title" 
+                   Padding="30,10,30,10" 
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center"/>
+        <Entry x:Name="EntryPIN" 
+               Keyboard="Numeric"
+               Text="0000"
+               HorizontalOptions="Center" />
+        <Button x:Name="loginButton" 
+                HorizontalOptions="Center"
+                CornerRadius ="15"
+                Opacity ="0.8"
+                Clicked="Login_Click"/>
+        <Label x:Name="infoMessage" 
+                   TextColor="Red"
+                   Padding="30,10,30,10" 
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImageGalleriesApp.Pages.ImageListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Фотографии" HorizontalOptions="Center" FontSize="Large"  Padding="30,10,30,10" StyleId="header" />
+            <ListView x:Name="deviceList"
+                      HasUnevenRows="True"
+                      ItemsSource="{Binding Photos}"
+                      ItemSelected="deviceList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell
+                           ImageSource="{Binding Image}"
+                           Text="{Binding Name}"
+                           TextColor="DodgerBlue"
+                           DetailColor="Gray"
+                           />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal" Padding="30,10,30,15" HorizontalOptions="StartAndExpand" >
+                <Button Clicked="Open"  Text="Открыть" />
+                <Button Clicked="Remove" Text="Удалить" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
